@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>OCI Experience Lab</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta
+    name="description"
+    content="Hands-on guided labs to experience Oracle Cloud Infrastructure (OCI) services."
+  />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="brand">
+      <span class="brand-icon">☁️</span>
+      <span class="brand-text">OCI Experience Lab</span>
+    </div>
+    <nav class="top-nav">
+      <a href="#services">Services</a>
+      <a href="#labs">Labs</a>
+      <a href="#architecture">Architecture</a>
+      <a href="#getting-started">Getting Started</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="hero">
+      <div class="hero-text">
+        <h1>Experience Oracle Cloud Infrastructure</h1>
+        <p>
+          A hands-on, self-paced GitHub Pages lab to explore core OCI services:
+          compute, networking, storage, databases, Kubernetes, observability, and
+          multi-cloud interconnects.
+        </p>
+        <div class="hero-actions">
+          <a href="#labs" class="btn primary">Start a Lab</a>
+          <a href="#getting-started" class="btn secondary">Setup Guide</a>
+        </div>
+        <p class="hero-note">
+          No real resources are created by this website. Use the snippets in your
+          own OCI tenancy with care.
+        </p>
+      </div>
+      <div class="hero-card">
+        <h2>Lab Progress</h2>
+        <ul id="lab-progress">
+          <li data-lab-id="compute">☐ Launch your first Compute instance</li>
+          <li data-lab-id="networking">☐ Build a public + private VCN</li>
+          <li data-lab-id="storage">☐ Store files in Object Storage</li>
+          <li data-lab-id="db">☐ Create a managed database</li>
+          <li data-lab-id="oke">☐ Deploy an app with OKE</li>
+          <li data-lab-id="observability">☐ Set up monitoring & alerts</li>
+          <li data-lab-id="iam">☐ Lock it down with IAM</li>
+          <li data-lab-id="interconnect">☐ Simulate OCI ↔ other cloud interconnect</li>
+        </ul>
+        <p class="tiny">
+          Progress is stored in your browser only (localStorage).
+        </p>
+      </div>
+    </section>
+
+    <!-- Service Tiles -->
+    <section id="services" class="section">
+      <h2>Core OCI Services You Will Experience</h2>
+      <div class="card-grid">
+        <article class="card service-card" data-service="compute">
+          <h3>Compute</h3>
+          <p>
+            Launch virtual machines or bare metal servers with flexible shapes
+            and predictable performance.
+          </p>
+          <button class="btn tertiary open-lab" data-lab="compute">
+            Open Compute Lab →
+          </button>
+        </article>
+
+        <article class="card service-card" data-service="networking">
+          <h3>Networking & Connectivity</h3>
+          <p>
+            Design secure VCNs, subnets, gateways, and network security groups
+            for your workloads.
+          </p>
+          <button class="btn tertiary open-lab" data-lab="networking">
+            Open Networking Lab →
+          </button>
+        </article>
+
+        <article class="card service-card" data-service="storage">
+          <h3>Storage</h3>
+          <p>
+            Use Block, Object, and File Storage for apps, backups, and analytics
+            at scale.
+          </p>
+          <button class="btn tertiary open-lab" data-lab="storage">
+            Open Storage Lab →
+          </button>
+        </article>
+
+        <article class="card service-card" data-service="db">
+          <h3>Databases</h3>
+          <p>
+            Explore Autonomous Database, MySQL HeatWave, and managed Oracle
+            Database services.
+          </p>
+          <button class="btn tertiary open-lab" data-lab="db">
+            Open Database Lab →
+          </button>
+        </article>
+
+        <article class="card service-card" data-service="oke">
+          <h3>Containers & OKE</h3>
+          <p>
+            Deploy containerized applications using the Oracle Kubernetes Engine
+            (OKE).
+          </p>
+          <button class="btn tertiary open-lab" data-lab="oke">
+            Open OKE Lab →
+          </button>
+        </article>
+
+        <article class="card service-card" data-service="observability">
+          <h3>Monitoring & Logging</h3>
+          <p>
+            Collect metrics, logs, and set alerts for proactive operations and
+            incident response.
+          </p>
+          <button class="btn tertiary open-lab" data-lab="observability">
+            Open Observability Lab →
+          </button>
+        </article>
+
+        <article class="card service-card" data-service="iam">
+          <h3>IAM & Governance</h3>
+          <p>
+            Control access with compartments, policies, groups, and tags for
+            cost & security governance.
+          </p>
+          <button class="btn tertiary open-lab" data-lab="iam">
+            Open IAM Lab →
+          </button>
+        </article>
+
+        <article class="card service-card" data-service="interconnect">
+          <h3>Interconnect & Multi-Cloud</h3>
+          <p>
+            Simulate how OCI connects securely to AWS, Azure or on-prem over
+            FastConnect and private peering.
+          </p>
+          <button class="btn tertiary open-lab" data-lab="interconnect">
+            Open Interconnect Simulation →
+          </button>
+        </article>
+      </div>
+    </section>
+
+    <!-- Labs -->
+    <section id="labs" class="section section-alt">
+      <h2>Interactive Labs</h2>
+      <p>
+        Pick a lab on the left to see step-by-step guidance, CLI snippets, and
+        Terraform examples.
+      </p>
+
+      <div class="labs-layout">
+        <aside class="labs-sidebar">
+          <button class="lab-nav active" data-lab="compute">Compute</button>
+          <button class="lab-nav" data-lab="networking">Networking</button>
+          <button class="lab-nav" data-lab="storage">Storage</button>
+          <button class="lab-nav" data-lab="db">Database</button>
+          <button class="lab-nav" data-lab="oke">OKE</button>
+          <button class="lab-nav" data-lab="observability">Observability</button>
+          <button class="lab-nav" data-lab="iam">IAM & Governance</button>
+          <button class="lab-nav" data-lab="interconnect">Interconnect (OCI ↔ Other Cloud)</button>
+        </aside>
+
+        <article class="lab-content card" id="lab-content">
+        </article>
+      </div>
+    </section>
+
+    <!-- Architecture -->
+    <section id="architecture" class="section">
+      <h2>Suggested Starter Architecture</h2>
+      <div class="card architecture-card">
+        <p>
+          This lab assumes a simple, production-inspired layout in OCI:
+        </p>
+        <ul>
+          <li>1 VCN with public + private subnets</li>
+          <li>Internet Gateway for load balancers only</li>
+          <li>NAT Gateway for outbound access from private subnets</li>
+          <li>Compute instances and OKE nodes in private subnets</li>
+          <li>Object Storage for artifacts and backups</li>
+          <li>Autonomous Database or MySQL HeatWave for data</li>
+          <li>Compartments to separate environments (dev / test / prod)</li>
+          <li>
+            Optional: private interconnect (FastConnect / VPN) to another cloud
+            or on-prem network
+          </li>
+        </ul>
+        <p class="tiny">
+          This page is a learning aid; validate quotas, IAM policies, and
+          security with your cloud team before deploying.
+        </p>
+      </div>
+    </section>
+
+    <!-- Getting started -->
+    <section id="getting-started" class="section section-alt">
+      <h2>Getting Started With the Lab</h2>
+      <ol class="steps-list">
+        <li>Create or use an existing OCI tenancy and user with limited test permissions.</li>
+        <li>Install the OCI CLI and configure a profile with API keys.</li>
+        <li>Clone this GitHub repository to view all snippets and Terraform examples.</li>
+        <li>Open each lab here, copy the sample commands, and run them from your terminal or pipeline.</li>
+        <li>Clean up resources when finished to avoid unnecessary cost.</li>
+      </ol>
+      <p class="tiny">
+        Tip: start in a non-production compartment with strict budgets and
+        alerts.
+      </p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>
+      Built as an educational GitHub Pages project to learn Oracle Cloud Infrastructure.
+    </p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
