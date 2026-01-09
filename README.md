@@ -52,5 +52,5 @@ Everything runs directly in your browser.
 ## 🌍 Live Demo
 
 https://scorpionlabs-cloud.github.io/oci-experience-lab/
-Once GitHub Pages is enabled:
+
 
