@@ -46,8 +46,8 @@
       <div class="hero-card">
         <h2>Lab Progress</h2>
         <ul id="lab-progress">
-          <li data-lab-id="compute">☐ Launch your first Compute instance</li>
           <li data-lab-id="networking">☐ Build a public + private VCN</li>
+          <li data-lab-id="compute">☐ Launch your first Compute instance</li>
           <li data-lab-id="storage">☐ Store files in Object Storage</li>
           <li data-lab-id="db">☐ Create a managed database</li>
           <li data-lab-id="oke">☐ Deploy an app with OKE</li>
@@ -65,17 +65,6 @@
     <section id="services" class="section">
       <h2>Core OCI Services You Will Experience</h2>
       <div class="card-grid">
-        <article class="card service-card" data-service="compute">
-          <h3>Compute</h3>
-          <p>
-            Launch virtual machines or bare metal servers with flexible shapes
-            and predictable performance.
-          </p>
-          <button class="btn tertiary open-lab" data-lab="compute">
-            Open Compute Lab →
-          </button>
-        </article>
-
         <article class="card service-card" data-service="networking">
           <h3>Networking & Connectivity</h3>
           <p>
@@ -84,6 +73,17 @@
           </p>
           <button class="btn tertiary open-lab" data-lab="networking">
             Open Networking Lab →
+          </button>
+        </article>
+        
+        <article class="card service-card" data-service="compute">
+          <h3>Compute</h3>
+          <p>
+            Launch virtual machines or bare metal servers with flexible shapes
+            and predictable performance.
+          </p>
+          <button class="btn tertiary open-lab" data-lab="compute">
+            Open Compute Lab →
           </button>
         </article>
 
@@ -165,8 +165,8 @@
 
       <div class="labs-layout">
         <aside class="labs-sidebar">
-          <button class="lab-nav active" data-lab="compute">Compute</button>
           <button class="lab-nav" data-lab="networking">Networking</button>
+          <button class="lab-nav active" data-lab="compute">Compute</button>
           <button class="lab-nav" data-lab="storage">Storage</button>
           <button class="lab-nav" data-lab="db">Database</button>
           <button class="lab-nav" data-lab="oke">OKE</button>
